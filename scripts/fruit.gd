@@ -27,6 +27,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
+    GameManager.add_to_score(points)
     animated_sprite_2d.play("collected")
     await animated_sprite_2d.animation_finished
     queue_free()

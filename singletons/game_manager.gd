@@ -1,11 +1,9 @@
 extends Node
 
+signal on_score_updated(score: int)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    pass # Replace with function body.
+var score: int = 0
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-    pass
+func add_to_score(points: int) -> void:
+    score += points
+    on_score_updated.emit(score)
