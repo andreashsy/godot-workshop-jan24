@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://r5vchbsu2gb2"]
+[gd_scene load_steps=10 format=3 uid="uid://r5vchbsu2gb2"]
 
 [ext_resource type="Texture2D" uid="uid://c0oysd4nhdmug" path="res://assets/Terrain (16x16).png" id="1_e4vj4"]
 [ext_resource type="Script" path="res://scripts/level_01.gd" id="1_p1q41"]
 [ext_resource type="PackedScene" uid="uid://drt0dg16o15bm" path="res://scenes/background.tscn" id="1_viaci"]
 [ext_resource type="PackedScene" uid="uid://dhrg24dm41rf7" path="res://scenes/ninja_frog.tscn" id="2_ugi6p"]
 [ext_resource type="PackedScene" uid="uid://dmxgjvpy72tl8" path="res://scenes/fruit.tscn" id="5_34eqg"]
+[ext_resource type="PackedScene" uid="uid://crltfsa2wfwby" path="res://scenes/hud.tscn" id="6_vn1on"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npnio"]
 texture = ExtResource("1_e4vj4")
@@ -546,5 +547,7 @@ points = 7
 position = Vector2(1055, 454)
 fruit = 2
 points = 7
+
+[node name="HUD" parent="." instance=ExtResource("6_vn1on")]
 
 [connection signal="body_entered" from="DeadZone" to="." method="_on_dead_zone_body_entered"]
