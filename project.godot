@@ -13,6 +13,7 @@ config_version=5
 config/name="Generic 2d Platformer"
 run/main_scene="res://scenes/level_01.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://assets/icon.png"
 
 [display]
 

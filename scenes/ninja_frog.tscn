@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dhrg24dm41rf7"]
+[gd_scene load_steps=40 format=3 uid="uid://dhrg24dm41rf7"]
 
 [ext_resource type="Texture2D" uid="uid://c8aguhvrs6l1x" path="res://assets/ninja_frog/Fall (32x32).png" id="1_d66ql"]
 [ext_resource type="Texture2D" uid="uid://bb107jbn2b0cp" path="res://assets/ninja_frog/Idle (32x32).png" id="1_pdsxs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b1rd7qdg14rs6" path="res://assets/ninja_frog/Hit (32x32).png" id="2_1tb34"]
 [ext_resource type="Texture2D" uid="uid://baxkjkf7eyh4y" path="res://assets/ninja_frog/Jump (32x32).png" id="4_qvwrh"]
 [ext_resource type="Texture2D" uid="uid://dvcsfw25wpupa" path="res://assets/ninja_frog/Run (32x32).png" id="5_32lik"]
+[ext_resource type="AudioStream" uid="uid://cwr7yqg6rlrvr" path="res://assets/audio/jump.wav" id="7_b6acc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m5jr"]
 atlas = ExtResource("2_1tb34")
@@ -271,3 +272,7 @@ shape = SubResource("RectangleShape2D_g1uh4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_bottom = 635
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_b6acc")
