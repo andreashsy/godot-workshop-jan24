@@ -501,4 +501,18 @@ metadata/_edit_group_ = true
 position = Vector2(769, 3.5)
 shape = SubResource("RectangleShape2D_n3lr6")
 
+[node name="StartPositions" type="Node" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="StartPositions" groups=["start_pos"]]
+position = Vector2(-132, 494)
+
+[node name="Marker2D2" type="Marker2D" parent="StartPositions" groups=["start_pos"]]
+position = Vector2(514, 518)
+
+[node name="Marker2D3" type="Marker2D" parent="StartPositions" groups=["start_pos"]]
+position = Vector2(1294, 520)
+
+[node name="Marker2D4" type="Marker2D" parent="StartPositions" groups=["start_pos"]]
+position = Vector2(808, 478)
+
 [connection signal="body_entered" from="DeadZone" to="." method="_on_dead_zone_body_entered"]
