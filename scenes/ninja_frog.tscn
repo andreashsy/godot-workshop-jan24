@@ -257,12 +257,13 @@ size = Vector2(15, 26)
 [node name="NinjaFrog" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_sp30k")
+JUMP = 300.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0bumv")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.729507
+frame_progress = 0.908694
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 3)
