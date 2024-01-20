@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://r5vchbsu2gb2"]
+[gd_scene load_steps=9 format=3 uid="uid://r5vchbsu2gb2"]
 
 [ext_resource type="Texture2D" uid="uid://c0oysd4nhdmug" path="res://assets/Terrain (16x16).png" id="1_e4vj4"]
 [ext_resource type="Script" path="res://scripts/level_01.gd" id="1_p1q41"]
 [ext_resource type="PackedScene" uid="uid://drt0dg16o15bm" path="res://scenes/background.tscn" id="1_viaci"]
 [ext_resource type="PackedScene" uid="uid://dhrg24dm41rf7" path="res://scenes/ninja_frog.tscn" id="2_ugi6p"]
+[ext_resource type="PackedScene" uid="uid://dmxgjvpy72tl8" path="res://scenes/fruit.tscn" id="5_34eqg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npnio"]
 texture = ExtResource("1_e4vj4")
@@ -514,5 +515,36 @@ position = Vector2(1294, 520)
 
 [node name="Marker2D4" type="Marker2D" parent="StartPositions" groups=["start_pos"]]
 position = Vector2(808, 478)
+
+[node name="Fruits" type="Node" parent="."]
+
+[node name="Apple" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(69, 524)
+
+[node name="Apple2" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(138, 523)
+
+[node name="Apple3" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(-12, 525)
+
+[node name="Banana" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(889, 454)
+fruit = 1
+points = 5
+
+[node name="Banana2" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(970, 418)
+fruit = 1
+points = 5
+
+[node name="Melon" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(1034, 420)
+fruit = 2
+points = 7
+
+[node name="Melon2" parent="Fruits" instance=ExtResource("5_34eqg")]
+position = Vector2(1055, 454)
+fruit = 2
+points = 7
 
 [connection signal="body_entered" from="DeadZone" to="." method="_on_dead_zone_body_entered"]
