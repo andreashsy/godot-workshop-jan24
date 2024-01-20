@@ -24,3 +24,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
     pass
+
+
+func _on_body_entered(body):
+    animated_sprite_2d.play("collected")
+    await animated_sprite_2d.animation_finished
+    queue_free()

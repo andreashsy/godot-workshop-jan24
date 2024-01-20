@@ -441,3 +441,5 @@ shape = SubResource("CircleShape2D_jov8o")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x6i7n")
 animation = &"melon"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
